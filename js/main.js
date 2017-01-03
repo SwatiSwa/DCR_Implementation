@@ -26,7 +26,7 @@ var btn = document.getElementById("playbutton"),
     };
 
 playerInstance.setup({
-    plugins     : {
+    'plugins'     : {
       'js/ggcmb510.js' : {
           apid                 : 'DHG163HR-BH45-JKY6-BKH7-67GJKY68GJK7',
           sfcode               : 'qat1',
@@ -97,7 +97,7 @@ playerInstance.setup({
 
 playerInstance.on('play',function() {
   ply = true;
-  btn.innerHTML = "<a href='javascript:playMyAd()'>Play an Ad!</a>";
+  btn.innerHTML = "<a href='javascript:playNext()'>Play Next!</a>";
 });
 playerInstance.on('pause',function() {
   ply = false;
@@ -114,10 +114,10 @@ playerInstance.on('volume',function() {
   btn.innerHTML = "Volume has been changed to:"+playerInstance.getVolume();
 });
 
-function playMyAd() {
+function playNext() {
   if(ply) {
-    playerInstance.playAd(tag);
+    playerInstance.next();
     ply = false;
-    btn.innerHTML = "Ad Playing! Please wait...";
+    btn.innerHTML = "Playing next Video! Please wait...";
    }
 };
