@@ -1,2 +1,1 @@
-# DCR_Implementation
-Rate your video using DCR
+"# DCR-Implementation-JW-Player" 
