@@ -1,3 +1,5 @@
+
+
 describe("TestVideoSpec", function() {
 	  var playerDom,player;
 
